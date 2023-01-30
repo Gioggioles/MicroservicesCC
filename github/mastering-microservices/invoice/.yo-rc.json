@@ -7,7 +7,7 @@
     "buildTool": "gradle",
     "cacheProvider": "hazelcast",
     "clientFramework": "no",
-    "creationTimestamp": 1673196204472,
+    "creationTimestamp": 1674854631140,
     "databaseType": "sql",
     "devDatabaseType": "h2Disk",
     "dtoSuffix": "DTO",
@@ -18,7 +18,7 @@
     "entitySuffix": "",
     "jhiPrefix": "jhi",
     "jhipsterVersion": "7.9.3",
-    "jwtSecretKey": "MTk5YmY1NDgwYjg3OGY3OTU4ZGJiOTg1MDY2MDY0ZDYwOWM4YjQ1YTBhNjg5MDhhMTUwMzEzNzJmNGNkY2NhZmVjYTNmNjIwNzY1NzZkODE0YzVjNjBhMWUxZDhjMjhkM2YyNDQzMzU1ODZiZjgyOGNjZWFmYWNmZDgwMmJjY2E=",
+    "jwtSecretKey": "MzU3ZjgwYWI4YTM1NzNiZmM0YzViMmUwNTRhMDA2NTQ1YWMyYTBlNWQ2ZDViOTgzYzA4YTQ2ZDVjNDE5ZDdjNDg2YTYwMmQzZDFhZGJmMmRhNGQ3MGRhOGFiY2QwMmU0ZTczYWIyM2M0ODM5Y2JhZGIzMTE5NmNiNTE3NmVhZWM=",
     "languages": ["fr", "en"],
     "messageBroker": false,
     "microfrontend": false,
@@ -41,6 +41,8 @@
     "skipUserManagement": true,
     "testFrameworks": ["cypress", "gatling", "cucumber"],
     "websocket": false,
-    "withAdminUi": false
+    "withAdminUi": false,
+    "entities": ["Invoice", "Shipment"],
+    "lastLiquibaseTimestamp": 1674856058000
   }
 }

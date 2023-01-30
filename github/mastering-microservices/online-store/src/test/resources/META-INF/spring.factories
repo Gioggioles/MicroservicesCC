@@ -1,1 +1,0 @@
-org.springframework.test.context.ContextCustomizerFactory = mosig.cloud.store.config.TestContainersSpringContextCustomizerFactory

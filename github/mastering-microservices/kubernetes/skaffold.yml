@@ -1,0 +1,21 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+    - image: gioggioles/gateway
+      context: ../gateway
+      jib: {}
+    - image: gioggioles/invoice
+      context: ../invoice
+      jib: {}
+    - image: gioggioles/notification
+      context: ../notification
+      jib: {}
+    - image: gioggioles/productorder
+      context: ../productorder
+      jib: {}
+  tagPolicy:
+    envTemplate:
+      template: "{{.IMAGE_NAME}}:latest"
+deploy:
+  kustomize: {}

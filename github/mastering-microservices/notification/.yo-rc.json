@@ -7,7 +7,7 @@
     "buildTool": "gradle",
     "cacheProvider": "hazelcast",
     "clientFramework": "no",
-    "creationTimestamp": 1673196322127,
+    "creationTimestamp": 1674854754387,
     "databaseType": "mongodb",
     "devDatabaseType": "mongodb",
     "dtoSuffix": "DTO",
@@ -18,7 +18,7 @@
     "entitySuffix": "",
     "jhiPrefix": "jhi",
     "jhipsterVersion": "7.9.3",
-    "jwtSecretKey": "MjA1MzA1Y2ZjMGRjN2I0NTA1MzY2Yjg2MTg1YWNkNzY2ZmNjZTFiMDNjNmJlYWIzZTc4ZDZlMzk5NjRlMGYwNWRhYzk3ZDc5NmY0YmI5YzlkZDg1Yzg2NGQ3NTNhOWM2MWI3MTFiZTA5YWFjYzU0MGYwYTJkMDIxZTEwNWI5YmU=",
+    "jwtSecretKey": "NGE4NmFlYWYxNDk0NDk5ZmFmNTgyNDYxOTkwYTM2MzJlOWU4ZmVhMWM3YTM5YmY4OGM4Y2IxYzY0MWFiODgwYTI0YjdlZDc4ZGI1NmNlYWUwZTcyNTI0MTg3Zjk0ZTZhNDlhYTQ3MDkxNjkyYjFmNzg1NzYwNTBjNmNjMmI3YjA=",
     "languages": ["fr", "en"],
     "messageBroker": false,
     "microfrontend": false,
@@ -41,6 +41,8 @@
     "skipUserManagement": true,
     "testFrameworks": ["cypress", "gatling", "cucumber"],
     "websocket": false,
-    "withAdminUi": false
+    "withAdminUi": false,
+    "entities": ["Notification"],
+    "lastLiquibaseTimestamp": 1674856058000
   }
 }

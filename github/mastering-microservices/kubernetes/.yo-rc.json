@@ -1,0 +1,17 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["gateway", "invoice", "notification", "productorder"],
+    "clusteredDbApps": ["notification"],
+    "directoryPath": "../",
+    "dockerPushCommand": "docker push",
+    "dockerRepositoryName": "gioggioles",
+    "ingressDomain": "",
+    "istio": false,
+    "jwtSecretKey": "NGMyMGRkODlhMDEyMTIxMjEzZDk5YmM1OThhNzMyNGExY2ZmOTkwMGY0NDVkZDY4MTFiNDZlODc4ZjU1ZmZiYzA5MDQxZmMzNzdjY2M4NWU4N2I2ZDUxYzA2MWFlMjc4NmRkNg==",
+    "kubernetesNamespace": "store",
+    "kubernetesServiceType": "LoadBalancer",
+    "kubernetesUseDynamicStorage": false,
+    "monitoring": "prometheus",
+    "serviceDiscoveryType": "eureka"
+  }
+}

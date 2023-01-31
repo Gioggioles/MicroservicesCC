@@ -108,7 +108,10 @@ The graphs found in the lower part show the trend of average Bytes received/tran
 <img title="a title" alt="proc" width="500" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/Schermata_20.png">
 
 
+## Conclusion 
+We managed to develop a miscroservice architecture, thanks to the use of GCP and applying some features to enhance our performances, such as enabling scalability. The use of GCP, thanks to its fludity of use, lead us to manage more efficiently our application and to obtain (and be able to monitor) positive results. 
 
-<img title="a title" alt="proc" width="500" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/Schermata_19.png">
-<img title="a title" alt="proc" width="500" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/Schermata_19.png">
+
+### Some considerations
+We tried extensively working on the last point, the Load Injection, but we were unable to overcome a multitude of errors that lead us to not be able to continue our work.
 

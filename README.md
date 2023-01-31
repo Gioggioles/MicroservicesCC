@@ -52,8 +52,63 @@ In a similar manner, we generated the three required microservices, choosing as 
 
 
 ## Deployment of the microservices on GCP with Kubernetes
-First of all,  we generated a kubernetes descriptor microservice and we checked the generated files: 
+First of all,  we generated a kubernetes descriptor microservice and we checked the generated files using the "tree . " command:
+
+
+<img title="a title" alt="proc" width="200" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/tree-kubernetes.png">
+
+After logging inside of docker, we pushed the 4 images generated before (gateway, invoice, productorder, notification). This is the view of our repository in docker.com where the images reside.
 
 <img title="a title" alt="proc" width="400" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/Schermata%20del%202023-01-30%2021-10-16.png">
 
+We created a cluster into the GCE region europe-west1, named "tuto-cluster".
+
+We now proceed launching the containers.
+Here we report the addresses of the components:
+
+<p><img title="a title" alt="proc" width="400" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/Schermata_1.png"> <img title="a title" alt="proc" width="500" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/Schermata_2.png"> </p>
+
+### Scalability
+To improve performances and fault tolerance of our service, we apply scalability to the productorder microservice, as shown in figure:
+
+<img title="a title" alt="proc" width="400" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/Schermata%20del%202023-01-30%2020-36-56.png">
+
+To have a further clarification, we show here how deploying the external IP address of the gateway our application is UP and in the productorder we can see that there are two nodes/servers running:
+
+<img title="a title" alt="proc" width="400" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/Schermata_6.png">
+
+We can notice how the productorder service is now associated to two different servers that refer to two different IP addresses.
+
+### Monitoring of the dashboard
+In order to obtain some representative metrics of the used resources and statistics of our application, we make use of the DCP dashboard.
+
+Before starting the monitoring process through the use of DCP, we decided to analyze the metrics provided by the gateway application:
+
+
+<img title="a title" alt="proc" width="500" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/Schermata_7.png">
+
+Now we will analyze some of the metrics in the DCP Dashboard.
+
+In this figure we show some representative metrics taking into consideration the whole cluster.
+<img title="a title" alt="proc" width="500" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/Schermata_19.png">
+
+We notice that we have a low to medium CPU usage but an high Memory usage.
+
+Representation of memory usage of the 4 services and of the exposed register:
+<img title="a title" alt="proc" width="500" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/memory_usage.png">
+
+How we can see in the figure above, the microservice productorder shows a mean value ( 1000 MiB) which is double with respect to the other microservices.
+
+
+
+In the next image, the graphs found in the upper part show the trend for CoreCPU (total, requested and allocatable)  And the (Total, Usage and Allocatable) Memory.
+
+The graphs found in the lower part show the trend of average Bytes received/transmitted and the maximum Bytes received/transmitted in our container.
+
+<img title="a title" alt="proc" width="500" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/Schermata_20.png">
+
+
+
+<img title="a title" alt="proc" width="500" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/Schermata_19.png">
+<img title="a title" alt="proc" width="500" src="https://github.com/Gioggioles/MicroservicesCC/blob/master/github/screenshots/Schermata_19.png">
 
